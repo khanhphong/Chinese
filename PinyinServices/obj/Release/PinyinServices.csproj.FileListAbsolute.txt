@@ -1,0 +1,5 @@
+c:\users\khánh\documents\visual studio 2013\Projects\PinyinServices\PinyinServices\bin\PinyinServices.dll.config
+c:\users\khánh\documents\visual studio 2013\Projects\PinyinServices\PinyinServices\bin\PinyinServices.dll
+c:\users\khánh\documents\visual studio 2013\Projects\PinyinServices\PinyinServices\bin\PinyinServices.pdb
+c:\users\khánh\documents\visual studio 2013\Projects\PinyinServices\PinyinServices\obj\Release\PinyinServices.dll
+c:\users\khánh\documents\visual studio 2013\Projects\PinyinServices\PinyinServices\obj\Release\PinyinServices.pdb

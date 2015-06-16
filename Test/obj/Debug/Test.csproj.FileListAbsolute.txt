@@ -1,0 +1,8 @@
+c:\users\khánh\documents\visual studio 2013\Projects\PinyinServices\Test\bin\Debug\Test.exe.config
+c:\users\khánh\documents\visual studio 2013\Projects\PinyinServices\Test\bin\Debug\Test.exe
+c:\users\khánh\documents\visual studio 2013\Projects\PinyinServices\Test\bin\Debug\Test.pdb
+c:\users\khánh\documents\visual studio 2013\Projects\PinyinServices\Test\obj\Debug\Test.frmMain.resources
+c:\users\khánh\documents\visual studio 2013\Projects\PinyinServices\Test\obj\Debug\Test.Properties.Resources.resources
+c:\users\khánh\documents\visual studio 2013\Projects\PinyinServices\Test\obj\Debug\Test.csproj.GenerateResource.Cache
+c:\users\khánh\documents\visual studio 2013\Projects\PinyinServices\Test\obj\Debug\Test.exe
+c:\users\khánh\documents\visual studio 2013\Projects\PinyinServices\Test\obj\Debug\Test.pdb

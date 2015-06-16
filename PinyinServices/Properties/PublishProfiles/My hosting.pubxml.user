@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAbJ7dUk7E2UmpGLLtfs4JiAAAAAACAAAAAAAQZgAAAAEAACAAAADeFaXGmVIeomn7OW77J+cRvu67zZv9bQM81+44Utwj4AAAAAAOgAAAAAIAACAAAAC7BxrG3evlzKxpPlZecKPaFNBrxgI5DvxHAnDmxvsXoSAAAADs8PlPq74zQa9kHzn/awktSzhcUlgqOHTU7YBXNLcl9kAAAAA/pWUcGSbDto1aTIx6pv87ph9Gu6N/Jiq5/IXYWl7fm/VUeYwt0QJonJteNyZ1cJRxpqXY3Yyc7E3MG/Z4ggRo</EncryptedPassword>
+    <_PublishTargetUrl>ftp://pinyin.somee.com/www.pinyin.somee.com</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/PinyinServices.dll">
+      <publishTime>06/15/2015 11:23:21</publishTime>
+    </File>
+    <File Include="Chinese.asmx">
+      <publishTime>06/13/2015 23:14:27</publishTime>
+    </File>
+    <File Include="Convert.asmx">
+      <publishTime>06/13/2015 22:48:17</publishTime>
+    </File>
+    <File Include="Database.xsc">
+      <publishTime>06/15/2015 10:49:34</publishTime>
+    </File>
+    <File Include="Database.xss">
+      <publishTime>06/15/2015 10:49:34</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>06/15/2015 11:23:43</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="https://khanhphong.net/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="https://khanhphong.net/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="https://khanhphong.net/">
+      <s:element name="GetPinyinWithNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Chinese" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPinyinWithNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPinyinWithNumberResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPinyinWithMark">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Chinese" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPinyinWithMarkResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPinyinWithMarkResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChineseByPinyin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Pinyin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChineseByPinyinResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetChineseByPinyinResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVietnamsesByChinese">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Chinese" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVietnamsesByChineseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVietnamsesByChineseResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TranslateToVietnamese">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChineseText" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TranslateToVietnameseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TranslateToVietnameseResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetPinyinWithNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPinyinWithNumber" />
+  </wsdl:message>
+  <wsdl:message name="GetPinyinWithNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPinyinWithNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPinyinWithMarkSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPinyinWithMark" />
+  </wsdl:message>
+  <wsdl:message name="GetPinyinWithMarkSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPinyinWithMarkResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetChineseByPinyinSoapIn">
+    <wsdl:part name="parameters" element="tns:GetChineseByPinyin" />
+  </wsdl:message>
+  <wsdl:message name="GetChineseByPinyinSoapOut">
+    <wsdl:part name="parameters" element="tns:GetChineseByPinyinResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVietnamsesByChineseSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVietnamsesByChinese" />
+  </wsdl:message>
+  <wsdl:message name="GetVietnamsesByChineseSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVietnamsesByChineseResponse" />
+  </wsdl:message>
+  <wsdl:message name="TranslateToVietnameseSoapIn">
+    <wsdl:part name="parameters" element="tns:TranslateToVietnamese" />
+  </wsdl:message>
+  <wsdl:message name="TranslateToVietnameseSoapOut">
+    <wsdl:part name="parameters" element="tns:TranslateToVietnameseResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ChineseSoap">
+    <wsdl:operation name="GetPinyinWithNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get string of Pinyin With Number codes from Chinese characters string</wsdl:documentation>
+      <wsdl:input message="tns:GetPinyinWithNumberSoapIn" />
+      <wsdl:output message="tns:GetPinyinWithNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPinyinWithMark">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get string of Pinyin With Mark codes from Chinese characters string</wsdl:documentation>
+      <wsdl:input message="tns:GetPinyinWithMarkSoapIn" />
+      <wsdl:output message="tns:GetPinyinWithMarkSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChineseByPinyin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get DataTable of Chinese Characters from Pinyin (with number).</wsdl:documentation>
+      <wsdl:input message="tns:GetChineseByPinyinSoapIn" />
+      <wsdl:output message="tns:GetChineseByPinyinSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVietnamsesByChinese">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Translates one (1) Chinese character to Vietnamese (Han - Viet) text.</wsdl:documentation>
+      <wsdl:input message="tns:GetVietnamsesByChineseSoapIn" />
+      <wsdl:output message="tns:GetVietnamsesByChineseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TranslateToVietnamese">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Translates Chinese text to Vietnamese (Han - Viet) text.</wsdl:documentation>
+      <wsdl:input message="tns:TranslateToVietnameseSoapIn" />
+      <wsdl:output message="tns:TranslateToVietnameseSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ChineseSoap" type="tns:ChineseSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPinyinWithNumber">
+      <soap:operation soapAction="https://khanhphong.net/GetPinyinWithNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPinyinWithMark">
+      <soap:operation soapAction="https://khanhphong.net/GetPinyinWithMark" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChineseByPinyin">
+      <soap:operation soapAction="https://khanhphong.net/GetChineseByPinyin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVietnamsesByChinese">
+      <soap:operation soapAction="https://khanhphong.net/GetVietnamsesByChinese" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TranslateToVietnamese">
+      <soap:operation soapAction="https://khanhphong.net/TranslateToVietnamese" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ChineseSoap12" type="tns:ChineseSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPinyinWithNumber">
+      <soap12:operation soapAction="https://khanhphong.net/GetPinyinWithNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPinyinWithMark">
+      <soap12:operation soapAction="https://khanhphong.net/GetPinyinWithMark" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChineseByPinyin">
+      <soap12:operation soapAction="https://khanhphong.net/GetChineseByPinyin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVietnamsesByChinese">
+      <soap12:operation soapAction="https://khanhphong.net/GetVietnamsesByChinese" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TranslateToVietnamese">
+      <soap12:operation soapAction="https://khanhphong.net/TranslateToVietnamese" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Chinese">
+    <wsdl:port name="ChineseSoap" binding="tns:ChineseSoap">
+      <soap:address location="http://localhost:49231/Chinese.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ChineseSoap12" binding="tns:ChineseSoap12">
+      <soap12:address location="http://localhost:49231/Chinese.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
